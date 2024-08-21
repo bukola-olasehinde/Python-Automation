@@ -1,5 +1,5 @@
 <h2>Scenario</h2>
-<p>As a security professional working in a tech company, I'm required to regularly update a file that identifies the employees who can access restricted content. The file content are based on who is working with personal client records.There is an access restriction, therefore there is an allow list for IP addresses permitted to sign into the restricted subnetwork and there is also a remove list that identifies which employees you must remove from this allow list.</p>
+<p>As a security professional working in a tech company, I'm required to regularly update a file that identifies the employees who can access restricted content. The file content are based on who is working with personal client records. There is an access restriction, therefore there is an allow list for IP addresses permitted to sign into the restricted subnetwork and there is also a remove list that identifies which employees you must remove from this allow list.</p>
 
 <h2>Objective</h2>
 <p></p>The goal is to create an algorithm that uses Python code to check whether the allow list contains any IP addresses identified on the remove list. If so, you should remove those IP addresses from the file containing the allow list.</p>
