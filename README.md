@@ -6,19 +6,24 @@
 
 <h2>Solution</h2>
 <b>Step 1 <br>Open the file that contain the allow list:</b>
-<p><img width="817" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/44a526f7-f12f-40fc-a63e-5800f3748257">
+<p><img width="817" alt="bukolasehinde" <img src="https://github.com/user-attachments/assets/71899b29-cac0-41cb-9e5c-17fbc84276c6">
+
+
 </p>
 <p>In the snapshot above, the 'with' statement is used with the .open() function in read mode to open the allow list file for the purpose of reading it. IP addresses that are allowed to access restricted informations are stored in the 'allow_list.txt' of the text file.<br> There are also IP addresses that should no longer have access to this information, and their IP addresses need to be removed from the text file, I assigned these IP adddresses to a variable named 'remove_list' that contains the list of IP addresses to be removed. <br>
 <p>I further displayed both variables to explore their contents.<br>To open the 'allow_list.txt' file:</p>
 <p>
-  <img width="835" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/1b013b7e-2497-49a0-a342-2f3b7a9dc69b">
+  <img width="835" alt="bukolasehinde" src="https://github.com/user-attachments/assets/e80baa84-3c17-42b9-938a-64bdecba287f">
+
+
 </p>
 <p>The output gives an error because the code only contains the first line of the 'with' statement which means opening the file. Next, I'll complete the 'with' statement by reading the file's content and working on other task operations on the file.</p>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 <b>Step 2 <br>Reading the file contents:</b>
 <p>
-  <img width="432" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/a1490438-f7b8-4805-aae7-d9c994bd9484">
+  <img width="432" alt="bukolasehinde" src="https://github.com/user-attachments/assets/8ca7235f-a6ea-4ab5-afc6-cce28e676686">
+
 </p>
 I used the .read() method to read the imported file which cotains the contents of the "allow_list.txt" file, and then converts into a string format
 that allows me to store it in the 'ip_addresses' variable.<br>
@@ -27,7 +32,8 @@ Afterwards, I displayed 'ip_addresses' using the print() function to examine the
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 <b>Step 3 <br>Converting the string into a list:</b>
 <p>
-  <img width="671" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/7cec1b72-515d-4929-9f78-88e38d58975b">
+  <img width="671" alt="bukolasehinde" src="https://github.com/user-attachments/assets/9e0d06b9-8630-4237-a83c-bbb486490853">
+
 </p>
 I need to convert the string into a list in order to remove individual IP addresses from the allow list. Therefore, I reassigned the ip_addresses variable using the .split() method which updated the data type from a string to a list, and later on allow me to remove some IP addresses from the allow list.<br>
 Moving on, I used the print() function to display 'ip_addresses' variable for update verification.</p>
@@ -35,14 +41,15 @@ Moving on, I used the print() function to display 'ip_addresses' variable for up
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 <b>Step 4 <br>Iterating through the remove list:</b>
 <p>
-  <img width="622" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/fb2b6ede-3d68-4ff5-9be5-9c72ea3a20af">
-</p>
+  <img width="622" alt="bukolasehinde" src="https://github.com/user-attachments/assets/2992e8bc-7aec-4efb-90ca-304af440e7fe">
+
 I need an iterative statement to remove the elements of 'remove_list' from the 'ip_addresses' list. So I built the iterative statement (for), with a loop variable named (element), and looped through 'remove_list'.<br> Finally, I displayed each element in 'remove_list' using the print() function.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 <b>Step 5 <br>Removing IP addresses that are on the remove list:</b>
 <p>
-  <img width="546" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/ae2e78d0-9fbb-4486-a8d9-1eb1e0ffb94c">
+  <img width="546" alt="bukolasehinde" src="https://github.com/user-attachments/assets/42eea2e5-05b6-45aa-baf8-78bb7f7bf139">
+
 </p>
 IP address from the allow list, 'ip_addresses' that is also contained in remove_list are to be removed but because there were not any duplicates in ip_addresses, I was able to use the code in the snapshot above to do this.<br>
 First, I created a conditional statement 'if' within the loop to evaluate if the loop variable element is in the ip_addresses list. I did this to avoid an error that might result from applying .remove() to elements that were not found in ip_addresses.<br>
@@ -55,7 +62,8 @@ I then displayed the updated ip_addresses list using the print() function to ver
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 <b>Step 6 <br>Updating the file with the revised list of IP addresses:</b>
 <p>
-  <img width="415" alt="image" src="https://github.com/devhalimah/Google-Cybersecurity-Professional-Certificate-Projects/assets/64546668/eeaa5843-b09c-4782-99ef-a8f5c733101b">
+  <img width="415" alt="bukolasehinde" src="https://github.com/user-attachments/assets/902bdd99-a460-4ed5-9759-b30b458f8dd9">
+
 </p>
 For the original file to be updated, I used the .join() method to create a string from the list ip_addresses so that I could pass it in as an argument to the .write() method when writing to the file "allow_list.txt". This is necessary because ip_addresses must be in string format when used inside the with statement to rewrite the file.
 
